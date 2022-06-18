@@ -4,7 +4,7 @@
   "description": "API de connexion à l'ENT via Node.JS afin de valider l'identité d'un élève",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "author": "Gamers-geek",
   "license": "ISC",
