@@ -16,6 +16,8 @@ app.post('/verifyEnt', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
+    return res.status(200).json(req.body)
+
     /*const data = {
         user: "LOGAN Clément",
         class: 216,
@@ -26,7 +28,7 @@ app.post('/verifyEnt', (req, res) => {
 
     return res.status(200).json(data)*/
 
-    pronote.login("https://0910625k.index-education.net/pronote/", username, password, "iledefrance")
+    /*pronote.login("https://0910625k.index-education.net/pronote/", username, password, "iledefrance")
         .then(session => {
             const data = {
                 user: session.user.name,
@@ -38,7 +40,7 @@ app.post('/verifyEnt', (req, res) => {
         })
         .catch(err => {
             res.status(501).json(err)
-        })
+        })*/
 })
 
 app.get("/verifyEnt", (req, res) => {
