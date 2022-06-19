@@ -44,8 +44,8 @@ app.post('/verifyEnt', (req, res) => {
 })
 
 app.get("/verifyEnt", (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
+    const username = req.query.username
+    const password = req.query.password
 
-    return res.send(req.body)
+    return res.send(req.query)
 })
