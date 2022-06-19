@@ -10,6 +10,8 @@ app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
 })
 
+app.get('/', (req, res) => res.send('Working!!!'));
+
 app.post('/verifyEnt', (req, res) => {
     const username = req.body.username
     const password = req.body.password
