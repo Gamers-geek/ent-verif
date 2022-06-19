@@ -47,5 +47,17 @@ app.get("/verifyEnt", (req, res) => {
     const username = req.query.username
     const password = req.query.password
 
-    return res.send(req.query)
+    pronote.login("https://0910625k.index-education.net/pronote/", username, password, "iledefrance")
+        .then(session => {
+            const data = {
+                user: session.user.name,
+                class: session.user.studentClass.name,
+                establishment: session.user.establishment
+            }
+            session.logout()
+            res.status(200).json(data)
+        })
+        .catch(err => {
+            res.status(501).json(err)
+        })
 })
