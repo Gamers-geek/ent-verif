@@ -44,7 +44,8 @@ app.post('/verifyEnt', (req, res) => {
 })
 
 app.get("/verifyEnt", (req, res) => {
-    res.status(501).json({
-        message: "This route is not implemented yet"
-    })
+    const username = req.body.username
+    const password = req.body.password
+
+    return res.send(req.body)
 })
