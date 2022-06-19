@@ -16,7 +16,7 @@ app.post('/verifyEnt', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
-    return res.status(200).json(req.body)
+    return res.send(req)
 
     /*const data = {
         user: "LOGAN Clément",
