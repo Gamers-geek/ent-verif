@@ -40,3 +40,9 @@ app.post('/verifyEnt', (req, res) => {
             res.status(501).json(err)
         })
 })
+
+app.get("/verifyEnt", (req, res) => {
+    res.status(501).json({
+        message: "This route is not implemented yet"
+    })
+})
