@@ -24,7 +24,7 @@ app.post("/verifyEnt", (req, res) => {
 		)
 		.then((session) => {
 			const userIdentity = session.user.name;
-			const userClass = session.user.studentClass;
+			const userClass = session.user.studentClass.name;
 			session.logout();
 			data = {
 				user: userIdentity,
