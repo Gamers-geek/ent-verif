@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config()
 const pronote = require("@dorian-eydoux/pronote-api");
 const express = require("express");
 const app = express();
@@ -17,10 +18,10 @@ app.post("/verifyEnt", (req, res) => {
 
 	pronote
 		.login(
-			"https://0910625k.index-education.net/pronote/",
+			process.env.PRONOTE_URL,
 			username,
 			password,
-			"iledefrance"
+			process.env.CAS
 		)
 		.then((session) => {
 			const userIdentity = session.user.name;
