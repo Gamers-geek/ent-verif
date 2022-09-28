@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@dorian-eydoux/pronote-api": "^2.3.4",
-    "express": "^4.17.3",
-    "dotenv": "^16.0.2"
+    "dotenv": "^16.0.2",
+    "express": "^4.17.3"
   }
 }
