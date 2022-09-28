@@ -87,6 +87,6 @@ app.post("/verifyEnt", (req, res) => {
 });
 
 app.post("/debug", (req, res) => {
-	if(process.env.DEBUG != TRUE) return res.status(404)
+	if(process.env.DEBUG != "ENABLED") return res.status(404)
 	return res.status(200).json(req.body) 
 })
