@@ -100,7 +100,18 @@ app.post("/homeworks", (req, res) => {
 		.then(async (session) => {
 			const userIdentity = session.user.name;
 			const userClass = session.user.studentClass.name;
-			const homeworks = await session.homeworks();
+			const date = new Date();
+			const today = new Date(
+				date.getFullYear(),
+				date.getMonth(),
+				date.getDate()
+			);
+			const toDate = new Date(
+				date.getFullYear(),
+				date.getMonth(),
+				date.getDate() + 100
+			);
+			const homeworks = await session.homeworks(today, toDate);
 			session.logout();
 			data = {
 				user: userIdentity,
