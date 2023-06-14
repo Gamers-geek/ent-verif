@@ -1,5 +1,5 @@
 const dotenv = require("dotenv").config();
-const pronote = require("@dorian-eydoux/pronote-api");
+const pronote = require("@gamers-geek/pronote-api");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;

@@ -9,7 +9,7 @@
   "author": "Gamers-geek",
   "license": "ISC",
   "dependencies": {
-    "@dorian-eydoux/pronote-api": "^2.3.4",
+    "@gamers-geek/pronote-api": "https://github.com/Gamers-geek/pronote-api/tarball/master",
     "dotenv": "^16.0.2",
     "express": "^4.17.3"
   }
